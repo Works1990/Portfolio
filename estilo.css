@@ -911,7 +911,7 @@ footer .socialicon:hover span {
         right: 0;
         top: 75px;
         background-color: #252A2E;
-        width: 200px;
+        width: 150px;
         z-index: 99; /* Aseguramos que esté encima de la imagen */
     }
     nav.responsive ul{
