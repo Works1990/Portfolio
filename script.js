@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const texts = ["Lidera", "Innova", "Automatiza", "Enseña", "Aprende", "Sé ágil", "Sinergiza", "Transciende"];
+    const texts = ["Enseña", "Aprende"];
     let index = 0;
     const logoText = document.getElementById("logo-text");
 

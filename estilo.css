@@ -8,7 +8,7 @@
 
 html{
     /* me permite deslizar cuando hago clic en los links del menu */
-    /*scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
 }
 #imagenMenuContainer {
     width: 100%;
@@ -39,7 +39,7 @@ body{
 }
 
 .contenedor-header header {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -98,8 +98,7 @@ body{
 
 /* SECCION I N I C I O */
 .inicio{
-    background: linear-gradient(to top, #fff    ),
-    url(img/fondo_noche.jpg);
+    background: linear-gradient(to top, #fff    ),url(img/fondo_noche.jpg);
     background-size: cover;
     height: 100vh;
     color: #131517;
@@ -146,13 +145,13 @@ body{
     align-items: flex-end;
 }
 
-.socialheading {
+/*.socialheading {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
     text-align: center;
     width: 100%;
-}
+}*/
 
 .socials {
     display: flex;
@@ -519,110 +518,6 @@ body{
     bottom: 4px;
 }
 
-/* SECCION EXPERIENCIA */
-.experiencia{
-    background-color: #1e2326;
-    color: #fff;
-    padding: 50px 20px;
-}
-.experiencia .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.experiencia h2{
-    font-size: 48px;
-    text-align: center;
-    padding: 20px 0;
-
-}
-.experiencia .fila{
-    display: flex;
-    justify-content: space-between;
-}
-.experiencia .fila .col{
-    width: 49%;
-    padding: 0 20px;
-}
-.experiencia .fila .col h3{
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-.experiencia .fila .izquierda{
-    border-right: 2px solid #252A2E;
-}
-.experiencia .fila .derecha{
-    border-left: 2px solid #252A2E;
-}
-.experiencia .fila .item{
-    padding: 25px;
-    margin-bottom: 30px;
-    background-color: #252A2E;
-    position: relative;
-}
-.experiencia .fila .item h4{
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.experiencia .fila .item .casa{
-    color: #1CB698;
-    font-size: 22px;
-    font-weight: bold;
-    display: block;
-}
-.experiencia .fila .item .fecha{
-    display: block;
-    color: #1CB698;
-    margin-bottom: 10px;
-}
-.experiencia .fila .item p{
-    line-height: 24px;
-}
-.experiencia .fila .izq{
-    border-right: 2px solid #1CB698;
-    margin-right: 20px;
-}
-.experiencia .fila .der{
-    border-left: 2px solid #1CB698;
-    margin-left: 20px;
-}
-.experiencia .fila .item .conectori{
-    height: 2px;
-    background-color: #1CB698;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    right: -47px;
-    z-index: 5;
-}
-.experiencia .fila .item .conectori .circuloi{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #1CB698;
-    float: right;
-    position: relative;
-    bottom: 4px;
-}
-.experiencia .fila .item .conectord{
-    height: 2px;
-    background-color: #1CB698;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    left: -47px;
-    z-index: 5;
-}
-.experiencia .fila .item .conectord .circulod{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #1CB698;
-    float: left;
-    position: relative;
-    bottom: 4px;
-}
 /* SECCION PORTFOLIO */
 .portfolio{
     background-color: #252A2E;
@@ -911,7 +806,7 @@ footer .socialicon:hover span {
         right: 0;
         top: 75px;
         background-color: #252A2E;
-        width: 150px;
+        width: 130px;
         z-index: 99; /* Aseguramos que esté encima de la imagen */
     }
     nav.responsive ul{
