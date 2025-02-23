@@ -47,12 +47,7 @@ body{
     padding: 15px 20px;
 }
 
-.contenedor-header header .logo a {
-    font-size: 25px;
-    color:#7ddef4;
-    text-decoration: none;
 
-}
 
 .contenedor-header header ul {
     display: flex;
@@ -78,7 +73,7 @@ body{
 }
 
 /* Media Queries para diseño responsivo */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .contenedor-header header ul {
         flex-direction: column;
         display: none;
@@ -102,7 +97,7 @@ body{
     background-size: cover;
     height: 100vh;
     color: #131517;
-
+    padding-top: 60px;
     display: flex;
     align-items: center;
 }
@@ -132,87 +127,53 @@ body{
     font-weight: normal;
     font-weight: bold;
 }   
-/* Estilos generales para el contenedor */
-#essentialicons {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+
+
+/* Estilos para íconos */
+#logo-facebook i {
+    color: #3b5998; /* Color de Facebook */
 }
 
-#socialnetworks {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+#logo-twitter i {
+    color: #1da1f2; /* Color de Twitter */
 }
 
-/*.socialheading {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-align: center;
-    width: 100%;
-}*/
-
-.socials {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#logo-instagram i {
+    color: #e1306c; /* Color de Instagram */
 }
 
-.socials li {
-    margin-left: 8px;
+#logo-linkedin i {
+    color: #0077b5; /* Color de LinkedIn */
 }
 
-.socialicon {
-    background-color: #8c9196; /* Fondo plomo */
+#logo-youtube i {
+    color: #ff0000; /* Color de YouTube */
+}
+
+#logo-tiktok i {
+    color: #ff0050; /* Color de TikTok */
+}
+
+.logo button {
+    background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 20px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 20%; /* Aseguramos que el fondo sea circular */
-    padding: 10px;
+    margin: 0 10px;
 }
 
-.socialicon span {
-    color: white; /* Aseguramos que los íconos sean visibles en blanco y negro */
-    width: 20px; /* Ancho del ícono */
-    height: 18px; /* Altura del ícono */
-    font-size: 20px; /* Tamaño de la fuente del ícono */
-    display: inline-block; /* Asegura que las dimensiones se apliquen correctamente */
-    line-height: 20px; /* Alinea verticalmente el ícono */
+.logo i {
+    font-size: 24px;
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
 }
 
-.socialicon:hover {
-    color: white; /* Cambiamos el color del ícono a blanco al pasar el mouse */
+.logo button:hover i {
+    color: #ffffff; /* Cambia el color al pasar el mouse */
 }
 
-/* Colores específicos para cada red social */
-.socialicon.twitter:hover {
-    background-color: #1da1f2;
-}
 
-.socialicon.facebook:hover {
-    background-color: #1056ec;
-    
-}
 
-.socialicon.linkedin:hover {
-    background-color: #0077b5;
-}
 
-.socialicon.youtube:hover {
-    background-color: #ff0000;
-}
 
-.socialicon.instagram:hover {
-    background: radial-gradient(circle at 35% 90%, #fed373 0%, #f15245 62%, #d92e7f 100%, #9b36b7 100%);
-}
-
-.socialicon.website:hover {
-    background-color: #353738e8;
-}
 
 
 .sobremi{
@@ -760,37 +721,8 @@ footer .arriba {
 }
 
 /* Nuevos estilos para centrar la lista ul */
-footer .redes .socials {
-    display: flex;
-    justify-content: center; /* Centramos los elementos dentro de la lista ul */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
-footer .redes .socials li {
-    margin: 0 10px; /* Espaciado entre los íconos */
-}
 
-footer .socialicon {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .socialicon span {
-    font-size: 24px; /* Tamaño de los íconos */
-    color: #fff;
-    transition: color 0.3s;
-}
-
-footer .socialicon:hover span {
-    color: #7ddef4; /* Color del ícono al pasar el ratón */
-}
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
