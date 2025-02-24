@@ -35,6 +35,8 @@ body{
     position: fixed;
     width: 100%;
     top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     left: 0;
     z-index: 99;
 }
@@ -45,7 +47,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    
 }
 
 
@@ -55,18 +57,27 @@ body{
     list-style: none;
 }
 
+
 .contenedor-header header nav ul li a {
     text-align: none;
     color: #fff;
-    margin: 0 15px;
-    padding: 3px;
+    margin: 8px;
+    padding: 10px 10px;
+
     transition: color 0.5s, transform 0.3s; /* Añadimos la transición para el cambio de escala */
     text-decoration: none;
+ 
 }
 
 .contenedor-header header nav ul li a:hover {
-    color: #7ddef4;
+  
     transform: scale(1.1); /* Añadimos la transformación de escala */
+    background-color:rgb(78, 76, 76);;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 2px;
+
 }
 
 .nav-responsive {
@@ -131,6 +142,9 @@ body{
     font-size: 20px;
     font-weight: bold;
     color: white;
+}
+.inicio .contenido-banner a svg{
+    margin-top: 10px;
 }
 
 #imagenMenuContainer {
@@ -219,15 +233,11 @@ body{
     max-width: 1100px;
     margin: auto;
 }
-.sobremi h2{
-    font-size: 48px;
-    text-align: center;
-    padding: 20px 0;
 
-}
 .sobremi .contenido-seccion p{
     font: 18px;
     line-height: 22px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
