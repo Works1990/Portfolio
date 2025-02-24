@@ -22,18 +22,18 @@ let menuVisible = false;
 
 function mostrarOcultarMenu() {
     const nav = document.getElementById("nav");
-    const imagenPrincipal = document.getElementById("imagenPrincipal");
     const imagenMenuContainer = document.getElementById("imagenMenuContainer");
+    const seccionInicio = document.getElementById("inicio");
 
     if (menuVisible) {
         nav.classList.remove("responsive");
-        imagenPrincipal.style.display = "block";
         imagenMenuContainer.style.display = "none";
+        seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')"; // Restaurar la imagen de fondo
         menuVisible = false;
     } else {
         nav.classList.add("responsive");
-        imagenPrincipal.style.display = "none";
         imagenMenuContainer.style.display = "block";
+        seccionInicio.style.backgroundImage = "none"; // Ocultar la imagen de fondo
         menuVisible = true;
     }
 }
@@ -43,10 +43,10 @@ function seleccionar() {
     document.getElementById("nav").classList = "";
     menuVisible = false;
 
-    // Mostrar imagen principal y ocultar imagen de menú
-    const imagenPrincipal = document.getElementById("imagenPrincipal");
+    // Restaurar imagen de fondo y ocultar imagen de menú
+    const seccionInicio = document.getElementById("inicio");
     const imagenMenuContainer = document.getElementById("imagenMenuContainer");
-    imagenPrincipal.style.display = "block";
+    seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
     imagenMenuContainer.style.display = "none";
 }
 
@@ -90,5 +90,21 @@ function efectoHabilidades() {
 // Detecto el scrolling para aplicar la animación de la barra de habilidades
 window.addEventListener('scroll', efectoHabilidades);
 
-// Añadir el evento de redimensionado para volver a "Inicio" al maximizar la ventana
+// Función para manejar el redimensionado de la ventana
+function handleResize() {
+    const nav = document.getElementById("nav");
+    const imagenMenuContainer = document.getElementById("imagenMenuContainer");
+    const seccionInicio = document.getElementById("inicio");
 
+    if (window.innerWidth > 768) {
+        // Restaurar la imagen de fondo y ocultar la imagen de menú
+        nav.classList.remove("responsive");
+        imagenMenuContainer.style.display = "none";
+        seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
+        menuVisible = false;
+    }
+}
+
+
+// Detecto el redimensionado de la ventana para aplicar la función correspondiente
+window.addEventListener('resize', handleResize);

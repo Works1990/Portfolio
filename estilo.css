@@ -93,42 +93,70 @@ body{
 }
 
 /* SECCION I N I C I O */
-.inicio{
-    background: linear-gradient(to top, #fff    ),url(img/fondo_noche.jpg);
-    background-size: cover;
-    height: 100vh;
-    color: #131517;
-    padding-top: 60px;
+.inicio {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh; /* Ajustamos la altura a 100vh */
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('img/anonymous.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #131517;
+    padding-top: 60px;
 }
-.inicio .contenido-banner{
+
+.inicio .contenido-banner {
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent; /* Usamos rgba para añadir transparencia */
     max-width: 500px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
 }
-.inicio .contenido-banner img{
-    margin-top: 60px;
-    border: 2px solid #eaf1f0;
-    display: block;
-    width: 80%;
-    margin: auto;
-    border-radius: 100%;
-}
-.inicio .contenido-banner h1{
-    margin-top: 40px;
-    font-size: 42px;
-    color: #131517;
-}
-.inicio .contenido-banner h2{
-    font-size: 20px;
-    font-weight: normal;
-    font-weight: bold;
-}   
 
+.inicio .contenido-banner h1 {
+   padding-top: 150px;
+    font-size: 42px;
+    color: white;
+
+}
+
+.inicio .contenido-banner h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+   
+}
+
+#imagenMenuContainer {
+    max-width: 100%;
+    overflow: hidden; /* Oculta cualquier desborde */
+    margin: auto; /* Centra la imagen */
+}
+
+#imagenMenu {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: cover; /* Aseguramos que la imagen se ajuste al contenedor */
+}
+
+
+/* Media query para ocultar la imagen de fondo en modo responsive */
+@media (max-width: 768px) {
+    .inicio {
+        background-image: none; /* Ocultamos la imagen de fondo en dispositivos pequeños */
+        background-color: #fff; /* Establecemos un color de fondo */
+    }
+}
 
 /* Estilos para íconos */
 #logo-facebook i {
