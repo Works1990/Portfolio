@@ -102,9 +102,6 @@ function handleResize() {
         imagenMenuContainer.style.display = "none";
         seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
         menuVisible = false;
-    } else {
-        // Asegurar que la imagen alternativa ocupe todo el espacio
-        imagenMenuContainer.style.display = "flex";
     }
 }
 

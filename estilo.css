@@ -114,7 +114,7 @@ body{
 
 .inicio .contenido-banner {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Usamos rgba para añadir transparencia */
+    background-color:transparent; /* Usamos rgba para añadir transparencia */
     max-width: 500px;
     margin: auto;
     text-align: center;
@@ -122,14 +122,15 @@ body{
 }
 
 .inicio .contenido-banner h1 {
-    margin-top: 40px;
+    margin-top: 130px;
     font-size: 42px;
-    color: #131517;
+    color:white;
 }
 
 .inicio .contenido-banner h2 {
     font-size: 20px;
     font-weight: bold;
+    color: white;
 }
 
 #imagenMenuContainer {
@@ -140,6 +141,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none; /* Ocultamos inicialmente */
 }
 
 #imagenMenu {
@@ -149,17 +151,6 @@ body{
     object-fit: cover; /* Aseguramos que la imagen se ajuste al contenedor */
 }
 
-/* Media query para ocultar la imagen de fondo en dispositivos móviles */
-@media (max-width: 768px) {
-    .inicio {
-        background-image: none; /* Ocultamos la imagen de fondo en dispositivos pequeños */
-        background-color: #fff; /* Establecemos un color de fondo */
-    }
-
-    #imagenMenuContainer {
-        display: none; /* Ocultamos la imagen alternativa en dispositivos pequeños */
-    }
-}
 
 
 /* Estilos para íconos */
