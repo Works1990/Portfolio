@@ -6,10 +6,11 @@
     padding: 0;
 }
 
-html{
-    /* me permite deslizar cuando hago clic en los links del menu */
-    scroll-behavior: smooth;
-}
+/*html{
+    /* me permite deslizar cuando hago clic en los links del menu
+    /*scroll-behavior: smooth;
+}*/
+
 #imagenMenuContainer {
     width: 100%;
     position: absolute; /* Añadimos posición absoluta */
@@ -156,9 +157,12 @@ body{
 
 .logo button {
     background-color: transparent;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     margin: 0 5px;
+    padding: 8px; /* Añadimos padding para los botones */
+    transition: padding 0.3s ease, background-color 0.3s ease; /* Añadimos transición para suavizar el cambio */
 }
 
 .logo i {
@@ -166,9 +170,16 @@ body{
     transition: color 0.3s ease; /* Transición suave al cambiar de color */
 }
 
-.logo button:hover i {
-    color: #ffffff; /* Cambia el color al pasar el mouse */
+.logo button:hover {
+    /*padding: 15px; Cambia el padding al pasar el mouse */
+    background-color:white; /* Color de fondo al pasar el mouse */
+   
 }
+
+.logo button:hover i {
+    color: #ffffff; /* Cambia el color del ícono al pasar el mouse */
+}
+
 
 
 
