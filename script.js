@@ -32,7 +32,7 @@ function mostrarOcultarMenu() {
         menuVisible = false;
     } else {
         nav.classList.add("responsive");
-        imagenMenuContainer.style.display = "block";
+        imagenMenuContainer.style.display = "flex"; /* Aseguramos que el contenedor se muestre como flexbox */
         seccionInicio.style.backgroundImage = "none"; // Ocultar la imagen de fondo
         menuVisible = true;
     }
@@ -102,9 +102,11 @@ function handleResize() {
         imagenMenuContainer.style.display = "none";
         seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
         menuVisible = false;
+    } else {
+        // Asegurar que la imagen alternativa ocupe todo el espacio
+        imagenMenuContainer.style.display = "flex";
     }
 }
-
 
 // Detecto el redimensionado de la ventana para aplicar la función correspondiente
 window.addEventListener('resize', handleResize);

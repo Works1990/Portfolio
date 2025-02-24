@@ -114,7 +114,7 @@ body{
 
 .inicio .contenido-banner {
     padding: 20px;
-    background-color: transparent; /* Usamos rgba para añadir transparencia */
+    background-color: rgba(255, 255, 255, 0.9); /* Usamos rgba para añadir transparencia */
     max-width: 500px;
     margin: auto;
     text-align: center;
@@ -122,41 +122,45 @@ body{
 }
 
 .inicio .contenido-banner h1 {
-   padding-top: 150px;
+    margin-top: 40px;
     font-size: 42px;
-    color: white;
-
+    color: #131517;
 }
 
 .inicio .contenido-banner h2 {
     font-size: 20px;
     font-weight: bold;
-    color: white;
-   
 }
 
 #imagenMenuContainer {
-    max-width: 100%;
-    overflow: hidden; /* Oculta cualquier desborde */
-    margin: auto; /* Centra la imagen */
+    width: 100%;
+    height: 100vh; /* Hacemos que el contenedor ocupe todo el alto de la ventana */
+    overflow: hidden;
+    margin: 0; /* Eliminamos márgenes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #imagenMenu {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    max-width: 100%;
     object-fit: cover; /* Aseguramos que la imagen se ajuste al contenedor */
 }
 
-
-/* Media query para ocultar la imagen de fondo en modo responsive */
+/* Media query para ocultar la imagen de fondo en dispositivos móviles */
 @media (max-width: 768px) {
     .inicio {
         background-image: none; /* Ocultamos la imagen de fondo en dispositivos pequeños */
         background-color: #fff; /* Establecemos un color de fondo */
     }
+
+    #imagenMenuContainer {
+        display: none; /* Ocultamos la imagen alternativa en dispositivos pequeños */
+    }
 }
+
 
 /* Estilos para íconos */
 #logo-facebook i {
