@@ -775,6 +775,7 @@ footer .arriba {
     }
     .nav-responsive{
         display: block;
+        padding: 10px;
     }
     nav.responsive{
         display: block;
