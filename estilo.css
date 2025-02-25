@@ -68,7 +68,7 @@ body{
 
     transition: color 0.5s, transform 0.3s; /* Añadimos la transición para el cambio de escala */
     text-decoration: none;
- 
+                                                                                                                                                   
 }
 
 .contenedor-header header nav ul li a:hover {
@@ -167,6 +167,32 @@ body{
     object-fit: cover; /* Aseguramos que la imagen se ajuste al contenedor */
 }
 
+.btn_whatsapp {
+    position: relative;
+    display: inline-block;
+}
+
+.btn_whatsapp .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom:-40%; /* Posición del tooltip arriba del ícono */
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn_whatsapp:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 
 
 /* Estilos para íconos */
@@ -786,8 +812,10 @@ footer .arriba {
         top: 75px;
         background-color:transparent;
         width: 130px;
+        font-weight: bold;
         z-index: 99; /*Aseguramos que esté encima de la imagen */
     }
+    
     nav.responsive ul{
         display: block !important;
     }
