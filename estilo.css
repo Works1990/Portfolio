@@ -784,7 +784,7 @@ footer .arriba {
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color:transparent;
         width: 130px;
         z-index: 99; /* Aseguramos que esté encima de la imagen */
     }
