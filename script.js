@@ -22,17 +22,17 @@ let menuVisible = false;
 
 function mostrarOcultarMenu() {
     const nav = document.getElementById("nav");
-    const imagenMenuContainer = document.getElementById("imagenMenuContainer");
+    const videoMenuContainer = document.getElementById("videoMenuContainer");
     const seccionInicio = document.getElementById("inicio");
 
     if (menuVisible) {
         nav.classList.remove("responsive");
-        imagenMenuContainer.style.display = "none";
+        videoMenuContainer.style.display = "none";
         seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')"; // Restaurar la imagen de fondo
         menuVisible = false;
     } else {
         nav.classList.add("responsive");
-        imagenMenuContainer.style.display = "flex"; /* Aseguramos que el contenedor se muestre como flexbox */
+        videoMenuContainer.style.display = "flex"; /* Aseguramos que el contenedor se muestre como flexbox */
         seccionInicio.style.backgroundImage = "none"; // Ocultar la imagen de fondo
         menuVisible = true;
     }
@@ -45,9 +45,9 @@ function seleccionar() {
 
     // Restaurar imagen de fondo y ocultar imagen de menú
     const seccionInicio = document.getElementById("inicio");
-    const imagenMenuContainer = document.getElementById("imagenMenuContainer");
+    const videoMenuContainer = document.getElementById("videoMenuContainer");
     seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
-    imagenMenuContainer.style.display = "none";
+    videoMenuContainer.style.display = "none";
 }
 
 // Variable para seguir el estado de animación
@@ -93,13 +93,13 @@ window.addEventListener('scroll', efectoHabilidades);
 // Función para manejar el redimensionado de la ventana
 function handleResize() {
     const nav = document.getElementById("nav");
-    const imagenMenuContainer = document.getElementById("imagenMenuContainer");
+    const videoMenuContainer = document.getElementById("videoMenuContainer");
     const seccionInicio = document.getElementById("inicio");
 
     if (window.innerWidth > 768) {
         // Restaurar la imagen de fondo y ocultar la imagen de menú
         nav.classList.remove("responsive");
-        imagenMenuContainer.style.display = "none";
+        videoMenuContainer.style.display = "none";
         seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
         menuVisible = false;
     }

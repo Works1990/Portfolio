@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 *{
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -11,7 +11,7 @@
     /*scroll-behavior: smooth;
 }*/
 
-#imagenMenuContainer {
+#videoMenuContainer  {
     width: 100%;
     position: absolute; /* Añadimos posición absoluta */
     top: 0; /* Lo posicionamos en la parte superior */
@@ -19,7 +19,7 @@
     z-index: 98; /* Aseguramos que esté debajo del menú */
 }
 
-#imagenMenu {
+#videoMenu  {
     width: 100%;
     height: auto;
     display: block;
