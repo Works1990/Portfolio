@@ -305,13 +305,14 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 
 .sobremi .fila .col .contenedor-intereses .interes {
     width: calc(33.33% - 10px); /* Ajustamos el ancho para que cada uno ocupe un tercio del contenedor */
     height: 80px;
     background-color: #252A2E;
-    border-radius: 10px;
+    border-radius: 0;
     margin: 5px; /* Ajustamos el margen para que haya espacio entre las columnas */
     display: flex;
     flex-direction: column;
@@ -320,13 +321,50 @@ body{
     transition: .3s;
 }
 
+
 .sobremi .fila .col .contenedor-intereses .interes:hover {
-    background-color: #7ddef4;
+    background-color: #666969;
+    cursor: pointer;
+    
 }
 
 .sobremi .fila .col .contenedor-intereses .interes i {
     font-size: 30px;
     margin-bottom: 10px;
+}
+.sobremi .fila .col h3{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#imgFoto {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    max-height: 400px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#imgPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 20px; /* Aplica padding derecho en escritorio (por defecto) */
+}
+
+/* Media query para pantallas más pequeñas (ancho máximo de 1024px, por ejemplo) */
+@media (max-width: 1024px) {
+    #imgFoto {
+        /* Ajusta el tamaño base y la altura máxima para pantallas más pequeñas */
+        flex-basis: 100%; /* Ocupa todo el ancho en pantallas más pequeñas */
+        max-height: 300px; /* Reduce la altura máxima en pantallas más pequeñas */
+    }
+    #imgPhoto {
+        padding-right: 0; /* Elimina padding derecho en pantallas más pequeñas */
+    }
 }
 
 /* Media query para mantener tres columnas en pantallas pequeñas */
@@ -356,7 +394,7 @@ body{
     position: relative;
     z-index: 10;
 }
-.sobremi button .overlay{
+/*.sobremi button .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -365,7 +403,7 @@ body{
     background-color: #1CB698;
     z-index: -1;
     transition: 1s;
-}
+}*/
 .sobremi button:hover .overlay{
     width: 100%;
 }
