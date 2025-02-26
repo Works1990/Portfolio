@@ -290,17 +290,8 @@ body{
 .sobremi .fila .col ul li{
     margin: 12px 0;
 }
-.sobremi .fila .col ul li strong{
-    display: inline-block;
-    color: #1CB698;
-    width: 110px;
-}
-.sobremi .fila .col ul li span{
-    background-color: #1CB698;
-    padding: 3px;
-    font-weight: bold;
-    border-radius: 5px;
-}
+
+
 .sobremi .fila .col .contenedor-intereses {
     display: flex;
     flex-wrap: wrap;
@@ -431,7 +422,8 @@ body{
     padding: 0 20px;
 }
 .skills .fila .col h3{
-    font-size: 28px;
+    font-size: 20px;
+    padding-top: 40px;
     margin-bottom: 25px;
 }
 .skills .skill > span{
@@ -462,7 +454,7 @@ body{
     background-color: #4dd1e2;
     height: 100%;
     width: 0; /* Empezamos desde 0 para animar */
-    position: relative; /* Asegura que el porcentaje se mueva dentro de la barra */
+    /*position: relative; /* Asegura que el porcentaje se mueva dentro de la barra */
     transition: width 2s ease-in-out; /* Animamos el ancho con una transición suave */
     border-radius: 7px; /* Mantiene los bordes redondeados */
 }
@@ -510,15 +502,16 @@ body{
     padding: 0 20px;
 }
 .curriculum .fila .col h3{
-    font-size: 28px;
+    font-size: 20px;
+    padding-top: 40px;
     margin-bottom: 25px;
 }
-.curriculum .fila .izquierda{
+/*.curriculum .fila .izquierda{
     border-right: 2px solid #252A2E;
 }
 .curriculum .fila .derecha{
     border-left: 2px solid #252A2E;
-}
+}*/
 .curriculum .fila .item{
     padding: 25px;
     margin-bottom: 30px;
@@ -530,28 +523,28 @@ body{
     margin-bottom: 10px;
 }
 .curriculum .fila .item .casa{
-    color: #1CB698;
+    color: #60dce0;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
 .curriculum .fila .item .fecha{
     display: block;
-    color: #1CB698;
+    color: #60dce0;
     margin-bottom: 10px;
 }
 .curriculum .fila .item p{
     line-height: 24px;
 }
-.curriculum .fila .izq{
+/*.curriculum .fila .izq{
     border-right: 2px solid #1CB698;
     margin-right: 20px;
 }
 .curriculum .fila .der{
     border-left: 2px solid #1CB698;
     margin-left: 20px;
-}
-.curriculum .fila .item .conectori{
+}*/
+/*.curriculum .fila .item .conectori{
     height: 2px;
     background-color: #1CB698;
     width: 47px;
@@ -569,8 +562,8 @@ body{
     float: right;
     position: relative;
     bottom: 4px;
-}
-.curriculum .fila .item .conectord{
+}*/
+/*.curriculum .fila .item .conectord{
     height: 2px;
     background-color: #1CB698;
     width: 47px;
@@ -588,7 +581,7 @@ body{
     float: left;
     position: relative;
     bottom: 4px;
-}
+}*/
 
 /* SECCION PORTFOLIO */
 .portfolio{
