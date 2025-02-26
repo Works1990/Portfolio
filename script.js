@@ -1,11 +1,11 @@
 function moveText(element) {
     element.style.transform = "scale(1.1)";
-    element.style.transition = "transform 0.3s"; /* Duración de la transición */
+    element.style.transition = "transform 0.3s";
 }
 
 function returnText(element) {
     element.style.transform = "scale(1)";
-    element.style.transition = "transform 0.3s"; /* Duración de la transición */
+    element.style.transition = "transform 0.3s";
 }
 
 function scaleIcon(element) {
@@ -28,32 +28,43 @@ function mostrarOcultarMenu() {
     if (menuVisible) {
         nav.classList.remove("responsive");
         videoMenuContainer.style.display = "none";
-        seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')"; // Restaurar la imagen de fondo
+        seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
         menuVisible = false;
     } else {
         nav.classList.add("responsive");
-        videoMenuContainer.style.display = "flex"; /* Aseguramos que el contenedor se muestre como flexbox */
-        seccionInicio.style.backgroundImage = "none"; // Ocultar la imagen de fondo
+        videoMenuContainer.style.display = "flex";
+        seccionInicio.style.backgroundImage = "none";
         menuVisible = true;
+
+        videoMenuContainer.style.display = "flex";
+        seccionInicio.style.backgroundImage = "none";
+
+        window.location.hash = "#inicio";
     }
 }
 
 function seleccionar() {
-    //oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
 
-    // Restaurar imagen de fondo y ocultar imagen de menú
     const seccionInicio = document.getElementById("inicio");
     const videoMenuContainer = document.getElementById("videoMenuContainer");
-    seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
-    videoMenuContainer.style.display = "none";
+
+    if (event.target.getAttribute("href") === "#inicio") {
+        seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
+        videoMenuContainer.style.display = "none";
+    } else {
+        seccionInicio.style.backgroundImage = "none";
+        videoMenuContainer.style.display = "flex";
+    }
 }
 
-// Variable para seguir el estado de animación
+document.querySelectorAll('#nav a').forEach(item => {
+    item.addEventListener('click', seleccionar);
+});
+
 let animacionEjecutada = false;
 
-// Función que aplica las animaciones de las habilidades
 function efectoHabilidades() {
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
@@ -67,37 +78,32 @@ function efectoHabilidades() {
             let count = 0;
             span.innerText = '0%';
 
-            // Animamos la barra y el porcentaje
             let interval = setInterval(() => {
                 if (count < porcentaje) {
                     count++;
                     span.innerText = `${count}%`;
                     habilidad.style.width = `${count}%`;
-                    span.style.left = `${count}%`; // Movemos el porcentaje junto con la barra
-                    span.style.opacity = 1; // Hacemos visible el porcentaje
+                    span.style.left = `${count}%`;
+                    span.style.opacity = 1;
                 } else {
                     clearInterval(interval);
                 }
-            }, 20); // Ajusta este valor para la velocidad de la animación del porcentaje
+            }, 20);
         }
-        animacionEjecutada = true; // Marcar que la animación ha sido ejecutada
+        animacionEjecutada = true;
 
-        // Dejar de escuchar el evento de desplazamiento
         window.removeEventListener('scroll', efectoHabilidades);
     }
 }
 
-// Detecto el scrolling para aplicar la animación de la barra de habilidades
 window.addEventListener('scroll', efectoHabilidades);
 
-// Función para manejar el redimensionado de la ventana
 function handleResize() {
     const nav = document.getElementById("nav");
     const videoMenuContainer = document.getElementById("videoMenuContainer");
     const seccionInicio = document.getElementById("inicio");
 
     if (window.innerWidth > 768) {
-        // Restaurar la imagen de fondo y ocultar la imagen de menú
         nav.classList.remove("responsive");
         videoMenuContainer.style.display = "none";
         seccionInicio.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/anonymous.jpg')";
@@ -105,5 +111,4 @@ function handleResize() {
     }
 }
 
-// Detecto el redimensionado de la ventana para aplicar la función correspondiente
 window.addEventListener('resize', handleResize);
