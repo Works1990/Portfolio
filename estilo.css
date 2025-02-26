@@ -13,18 +13,19 @@
 
 #videoMenuContainer  {
     width: 100%;
-    /*height: 100%; Aseguramos que el contenedor ocupe toda la altura */
+    height:100%; /*Aseguramos que el contenedor ocupe toda la altura */
     position: absolute; /* Añadimos posición absoluta */
     top: 0; /* Lo posicionamos en la parte superior */
     left: 0; /* Lo posicionamos a la izquierda */
     z-index: 98; /* Aseguramos que esté debajo del menú */
+    object-fit: cover;
 }
 
 #videoMenu  {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    /*object-fit: cover;  Asegura que el video cubra completamente el contenedor sin distorsionarse */
+    object-fit: cover;  /*Asegura que el video cubra completamente el contenedor sin distorsionarse */
 }   
 
 /* MENU */
