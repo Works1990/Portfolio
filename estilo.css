@@ -11,22 +11,21 @@
     /*scroll-behavior: smooth;
 }*/
 
-#videoMenuContainer {
+#videoMenuContainer  {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Cambiado a -1 */
-    object-fit: cover;
+    /*height: 100%; Aseguramos que el contenedor ocupe toda la altura */
+    position: absolute; /* Añadimos posición absoluta */
+    top: 0; /* Lo posicionamos en la parte superior */
+    left: 0; /* Lo posicionamos a la izquierda */
+    z-index: 98; /* Aseguramos que esté debajo del menú */
 }
 
-#videoMenu {
+#videoMenu  {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    object-fit: cover;
-} 
+    /*object-fit: cover;  Asegura que el video cubra completamente el contenedor sin distorsionarse */
+}   
 
 /* MENU */
 body{
